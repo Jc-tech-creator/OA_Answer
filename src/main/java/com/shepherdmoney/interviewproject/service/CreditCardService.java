@@ -18,7 +18,7 @@ import java.util.Optional;
 public class CreditCardService {
     @Autowired
     private CreditCardRepository creditCardRepository;
-
+    //dependency injection
     public void updateBalanceHistory(String creditCardNumber, Instant transactionTime, double transactionAmount) {
         Optional<CreditCard> creditCardOptional = creditCardRepository.findByNumber(creditCardNumber);
         if (!creditCardOptional.isPresent()) {
